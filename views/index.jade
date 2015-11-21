@@ -1,3 +1,42 @@
 extends ./_layout.jade
 block content
-    h1 Hello!
+    .slider
+      ul.slides
+        li
+          img(src='http://lorempixel.com/580/250/nature/1')
+          // random image
+          .caption.center-align
+            h3 Give your opinion!
+            h5.light.grey-text.text-lighten-3 Look through a ton of polls to leave your opinion.
+        li
+          img(src='http://lorempixel.com/580/250/nature/2')
+          // random image
+          .caption.left-align
+            h3 Create your own ones.
+            h5.light.grey-text.text-lighten-3 Don't you find any poll you like? That's not a problem :D
+        li
+          img(src='http://lorempixel.com/580/250/nature/3')
+          // random image
+          .caption.right-align
+            h3 Keep alert!
+            h5.light.grey-text.text-lighten-3 You can check at anytime your polls and quantity of votes.
+        li
+          img(src='http://lorempixel.com/580/250/nature/4')
+          // random image
+          .caption.center-align
+            h3 Enjoy!
+            h5.light.grey-text.text-lighten-3 You can create polls even of superheroes!
+    
+    .container(style="margin-top: 25px")
+        .row
+            .col.s12.m4
+                header.center-align
+                    i.material-icons.large.light-green-text done_all
+                p Your opinion is important for every person who makes a poll, so, don't forget to mark an option in the polls.
+            .col.s12.m4
+                header.center-align
+                    i.material-icons.large.teal-text.text-darken-1 stars
+                p Want to know what people think about something ? Or, have a doubt about something ? Don't forget to create your own polls to have an answer.
+            .col.s12.m4
+                header.center-align
+                p
