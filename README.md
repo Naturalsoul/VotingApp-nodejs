@@ -13,7 +13,7 @@ You can visit [my Dashboard in C9](https://c9.io/naturalsoul) to enter directly 
 If you want to collaborate from your PC, you'll need some things to run the project:
   - NodeJS
   - NPM
-  - MongoDB
+  - MongoDB <br />
 Make sure that you already installed them.
 
 ## Footer
