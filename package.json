@@ -1,0 +1,28 @@
+{
+  "name": "votingapp",
+  "version": "1.0.0",
+  "description": "This is a Basejump of FreeCodeCamp",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naturalsoul/VotingApp-nodejs.git"
+  },
+  "keywords": [
+    "votingapp",
+    "node",
+    "express"
+  ],
+  "author": "Naturalsoul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naturalsoul/VotingApp-nodejs/issues"
+  },
+  "homepage": "https://github.com/Naturalsoul/VotingApp-nodejs#readme",
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0"
+  }
+}
