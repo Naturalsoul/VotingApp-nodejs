@@ -1,6 +1,6 @@
 # VotingApp using NodeJS
 
-This a Basejump from [FreeCodeCamp](www.freecodecamp.com) who challenge to use NodeJS and other stuff to complete it.
+This is a Basejump of [FreeCodeCamp](www.freecodecamp.com) who challenge to use NodeJS and other stuff to complete it.
 
 ## About
 This allows you to register, make a poll and vote. The theme of the poll can be any and give you all the options you
