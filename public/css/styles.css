@@ -13,3 +13,29 @@ nav {
 .caption  h3, .caption h5 {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
+
+.button-collapse {
+    margin-left: 25px;
+}
+
+hr {
+    margin-top: 100px;
+}
+
+/* Sign Up */
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+@media screen and (max-width: 600px) {
+    .brand-logo {
+        margin-left: 0;
+    }
+    
+    form {
+        width: 250px;
+    }
+}

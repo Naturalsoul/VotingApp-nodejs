@@ -19,16 +19,52 @@ html
               li
                 a.grey-text(href='/') Home
               li
-                a.grey-text(href='badges.html') Log In
+                a.grey-text(href="#") Find a Poll
               li
-                a.grey-text(href='collapsible.html') Sign Up
+                a.grey-text(href='#') Log In
+              li
+                a.grey-text(href='/signup') Sign Up
             ul#mobile-demo.side-nav
               li
-                a(href='sass.html') Home
+                a(href='/') Home
               li
-                a(href='badges.html') Log In
+                a(href="#") Find a Poll
               li
-                a(href='collapsible.html') Sign Up
+                a(href='#') Log In
+              li
+                a(href='#') Sign Up
+                
+      .slider
+        ul.slides
+          li
+            img(src='http://lorempixel.com/580/250/nature/1')
+            // random image
+            .caption.center-align
+              h3 Give your opinion!
+              h5.light.grey-text.text-lighten-3 Look through a ton of polls to leave your opinion.
+          li
+            img(src='http://lorempixel.com/580/250/nature/2')
+            // random image
+            .caption.left-align
+              h3 Create your own ones.
+              h5.light.grey-text.text-lighten-3 Don't you find any poll you like? That's not a problem :D
+          li
+            img(src='http://lorempixel.com/580/250/nature/3')
+            // random image
+            .caption.right-align
+              h3 Keep alert!
+              h5.light.grey-text.text-lighten-3 You can check at anytime your polls and quantity of votes.
+          li
+            img(src='http://lorempixel.com/580/250/nature/4')
+            // random image
+            .caption.center-align
+              h3 Enjoy!
+              h5.light.grey-text.text-lighten-3 You can create polls even of superheroes!
+              
         block content
         
-        h5 asfdasdfasf
+        hr
+        footer
+          .row
+              .col.s12.center-align
+                  p #[a(href="http://www.freecodecamp.com/challenges/basejump-build-a-voting-app", target="_blank") FreeCodeCamp Basejump] | #[a(href="http://codepen.io/naturalsoul/full/zvOVev", target="_blank") Naturalsoul].

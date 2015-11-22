@@ -10,6 +10,10 @@ server.get("/", function(req, res) {
     res.render("index");
 });
 
+server.get("/signup", function(req, res) {
+    res.render("signup");
+});
+
 server.listen(8080, function() {
     console.log("Hey! I'm listening in the port 8080 ;D");
 });
