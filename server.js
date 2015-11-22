@@ -10,6 +10,10 @@ server.get("/", function(req, res) {
     res.render("index");
 });
 
+server.get("/login", function(req, res) {
+    res.render("login");
+});
+
 server.get("/signup", function(req, res) {
     res.render("signup");
 });
