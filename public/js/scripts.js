@@ -1,7 +1,19 @@
 $(document).ready(function() {
-    $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav({closeOnClick: true});
     $('.slider').slider({full_width: true});
     $('.modal-trigger').leanModal();
+    
+    // button-collapse's modals doesn't work without this portion of code -----
+    
+    $("#login-mobile-modal").on("click", function() {
+        $("#login-modal").openModal()
+    })
+    
+    $("#signup-mobile-modal").on("click", function() {
+        $("#signup-modal").openModal()
+    })
+    
+    // ------------------------------------------------------------------------
     
     $("#signup-submit").on("click", function() {
         $.ajax({
@@ -10,7 +22,6 @@ $(document).ready(function() {
             data: $("#signup-form").serialize(),
             success: function(msg) {
                 alert(msg)
-                console.log(msg)
                 $("#username").val("")
                 $("#email").val("")
                 $("#pass").val("")
@@ -18,7 +29,7 @@ $(document).ready(function() {
                 $("#signup-modal").closeModal()
             },
             error: function() {
-                alert("Error de conexión.")
+                alert("Error: 'Bad Connection'")
             }
         })
     })
@@ -35,7 +46,7 @@ $(document).ready(function() {
                 $("#login-modal").closeModal()
             },
             error: function() {
-                alert("Error...")
+                alert("Error: 'Bad Connection'")
             }
         })
     })

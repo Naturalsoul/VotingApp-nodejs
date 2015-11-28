@@ -4,14 +4,20 @@ var UserModel = new users()
 exports.create = function(req, res) {
     if(req.method.toLowerCase() != "post") res.render("index.jade")
     else {
-        var user = {
-            name: req.body.signupName,
-            email: req.body.email,
-            pass: req.body.signupPass
-        }
-        
-        new users({ name: user.name, email: user.email, pass: user.pass }).save()
-        res.send("ok")
+        users.findOne({name: req.body.signupName}, function(err, data) {
+            if(err) throw err
+            if(data != null) res.send("User already created!", {"Content-type" : "text/plain"}, 403)
+            else {
+                var user = {
+                    name: req.body.signupName,
+                    email: req.body.email,
+                    pass: req.body.signupPass
+                }
+                
+                new users({ name: user.name, email: user.email, pass: user.pass }).save()
+                res.send("ok")
+            }
+        })
     }
 }
 

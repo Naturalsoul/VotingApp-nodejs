@@ -30,9 +30,9 @@ html
               li
                 a(href="#") Find a Poll
               li
-                a(href='/login') Log In
+                a#login-mobile-modal(href='#login-modal') Log In
               li
-                a(href='/signup') Sign Up
+                a#signup-mobile-modal(href='#signup-modal') Sign Up
                 
       .slider
         ul.slides
@@ -61,7 +61,7 @@ html
               h3 Enjoy!
               h5.light.grey-text.text-lighten-3 You can create polls even of superheroes!
               
-        // Modals Here -----
+        // Modals Here -------------------------------------------------------------------------------------
         
         #login-modal.modal
           .modal-content
@@ -113,7 +113,7 @@ html
                 a.modal-action.modal-close.wafes-effect.waves-blue.btn-flat Close
 
         
-        // -----------
+        // ---------------------------------------------------------------------------------------------------
               
         block content
         
