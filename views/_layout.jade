@@ -66,7 +66,7 @@ html
         #login-modal.modal
           .modal-content
             h4.center-align.bold Log In
-            form
+            form(method="POST", action="/login")
               .row
                 .col.s12
                     .row
@@ -86,7 +86,7 @@ html
         #signup-modal.modal
           .modal-content
             h4.center-align.bold Sign Up
-            form
+            form#signup-form(method="POST", action="/signup")
               .row
                 .col.s12
                     .row
@@ -107,8 +107,9 @@ html
                             input#pass2.validate(type="password", required)
                             label(for="pass2") Repeat the Password
               .modal-footer
-                a.modal-action.waves-effect.waves-green.btn-flat(type="submit", name="signup-action") Sign Up
+                a.modal-action.waves-effect.waves-green.btn-flat#signup-submit(type="submit", name="signup-action") Sign Up
                   i.material-icons.right send
+                a.modal-action.modal-close.wafes-effect.waves-blue.btn-flat Close
 
         
         // -----------
