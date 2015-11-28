@@ -66,22 +66,23 @@ html
         #login-modal.modal
           .modal-content
             h4.center-align.bold Log In
-            form(method="POST", action="/login")
+            form#login-form(method="POST", action="/login")
               .row
                 .col.s12
                     .row
                         .input-field.col.s12
                             i.material-icons.prefix account_circle
-                            input#username-login.validate(type="text", required)
+                            input#loginName.validate(type="text", required, name="loginName")
                             label(for="username-login") Username
                         .input-field.col.s12
                             i.material-icons.prefix lock_outline
-                            input#pass-login.validate(type="password", required)
+                            input#loginPass.validate(type="password", required, name="loginPass")
                             label(for="pass-login") Password
                     
               .modal-footer
-                a.modal-action.waves-effect.waves-green.btn-flat(type="submit", name="login-action") Log In
+                a.modal-action.waves-effect.waves-green.btn-flat#login-submit(type="submit", name="login-action") Log In
                   i.material-icons.right lock_open
+                a.modal-action.modal-close.waves-effect.waves-blue.btn-flat Close
             
         #signup-modal.modal
           .modal-content
@@ -92,19 +93,19 @@ html
                     .row
                         .input-field.col.s12.m6
                             i.material-icons.prefix account_circle
-                            input#username.validate(type="text", required)
+                            input#username.validate(type="text", required, name="signupName")
                             label(for="username") Username
                         .input-field.col.s12.m6
                             i.material-icons.prefix email
-                            input#email.validate(type="email", required)
+                            input#email.validate(type="email", required, name="email")
                             label(for="email") Email
                         .input-field.col.s12.m6
                             i.material-icons.prefix lock_outline
-                            input#pass.validate(type="password", required)
+                            input#pass.validate(type="password", required, name="signupPass")
                             label(for="pass") Password
                         .input-field.col.s12.m6
                             i.material-icons.prefix https
-                            input#pass2.validate(type="password", required)
+                            input#pass2.validate(type="password", required, name="pass2")
                             label(for="pass2") Repeat the Password
               .modal-footer
                 a.modal-action.waves-effect.waves-green.btn-flat#signup-submit(type="submit", name="signup-action") Sign Up

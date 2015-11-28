@@ -5,9 +5,9 @@ var ObjectId = schema.ObjectId
 var usersSchema = new schema({
     ObjectId: ObjectId,
     date: {type: Date, default: Date.now},
-    name: {type: String, unique: true},
+    name: String,
     email: String,
     pass: String
 })
 
-module.exports = mongoose.model("User", usersSchema)
+module.exports = mongoose.model("Users", usersSchema)
