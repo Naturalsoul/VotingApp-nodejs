@@ -21,9 +21,9 @@ html
               li
                 a.grey-text(href="#") Find a Poll
               li
-                a.grey-text(href='/login') Log In
+                a.grey-text.modal-trigger(href='#login-modal') Log In
               li
-                a.grey-text(href='/signup') Sign Up
+                a.grey-text.modal-trigger(href='#signup-modal') Sign Up
             ul#mobile-demo.side-nav
               li
                 a(href='/') Home
@@ -60,6 +60,58 @@ html
             .caption.center-align
               h3 Enjoy!
               h5.light.grey-text.text-lighten-3 You can create polls even of superheroes!
+              
+        // Modals Here -----
+        
+        #login-modal.modal
+          .modal-content
+            h4.center-align.bold Log In
+            form
+              .row
+                .col.s12
+                    .row
+                        .input-field.col.s12
+                            i.material-icons.prefix account_circle
+                            input#username-login.validate(type="text", required)
+                            label(for="username-login") Username
+                        .input-field.col.s12
+                            i.material-icons.prefix lock_outline
+                            input#pass-login.validate(type="password", required)
+                            label(for="pass-login") Password
+                    
+              .modal-footer
+                a.modal-action.waves-effect.waves-green.btn-flat(type="submit", name="login-action") Log In
+                  i.material-icons.right lock_open
+            
+        #signup-modal.modal
+          .modal-content
+            h4.center-align.bold Sign Up
+            form
+              .row
+                .col.s12
+                    .row
+                        .input-field.col.s12.m6
+                            i.material-icons.prefix account_circle
+                            input#username.validate(type="text", required)
+                            label(for="username") Username
+                        .input-field.col.s12.m6
+                            i.material-icons.prefix email
+                            input#email.validate(type="email", required)
+                            label(for="email") Email
+                        .input-field.col.s12.m6
+                            i.material-icons.prefix lock_outline
+                            input#pass.validate(type="password", required)
+                            label(for="pass") Password
+                        .input-field.col.s12.m6
+                            i.material-icons.prefix https
+                            input#pass2.validate(type="password", required)
+                            label(for="pass2") Repeat the Password
+              .modal-footer
+                a.modal-action.waves-effect.waves-green.btn-flat(type="submit", name="signup-action") Sign Up
+                  i.material-icons.right send
+
+        
+        // -----------
               
         block content
         

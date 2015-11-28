@@ -3,19 +3,11 @@ var mongoose = require("mongoose");
 
 var server = express();
 server.set("view engine", "jade");
-//mongoose.connect("mongodb://localhost/votingapp");
+mongoose.connect("mongodb://localhost/votingapp");
 server.use(express.static("public"));
 
 server.get("/", function(req, res) {
     res.render("index");
-});
-
-server.get("/login", function(req, res) {
-    res.render("login");
-});
-
-server.get("/signup", function(req, res) {
-    res.render("signup");
 });
 
 server.listen(8080, function() {
