@@ -5,7 +5,7 @@ var ObjectId = schema.ObjectId
 var usersSchema = new schema({
     ObjectId: ObjectId,
     date: {type: Date, default: Date.now},
-    name: String,
+    name: {type: String, unique: true},
     email: String,
     pass: String
 })

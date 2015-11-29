@@ -6,7 +6,7 @@ exports.create = function(req, res) {
     else {
         users.findOne({name: req.body.signupName}, function(err, data) {
             if(err) throw err
-            if(data != null) res.send("User already created!", {"Content-type" : "text/plain"}, 403)
+            if(data != null) res.status(403).send("Username already used!")
             else {
                 var user = {
                     name: req.body.signupName,
@@ -15,7 +15,7 @@ exports.create = function(req, res) {
                 }
                 
                 new users({ name: user.name, email: user.email, pass: user.pass }).save()
-                res.send("ok")
+                res.status(200).send("Registered!")
             }
         })
     }
@@ -27,18 +27,18 @@ exports.login = function(req, res) {
         users.findOne({name: req.body.loginName}, function(err, data) {
             if(err) throw err
             if(data == null) {
-                res.send("Invalid Username", {"Content-type" : "text/plain"}, 403)
+                res.status(403).send("Invalid Username.")
             }
             else auth(data)
         })
         
         function auth(userRes) {
             if(req.body.loginPass != userRes.pass) {
-                res.send("Invalid Password", {"Content-type": "text/plain"}, 403)
+                res.status(403).send("Invalid Password.")
             } else {
                 console.log(userRes._id)
                 users.update({_id: userRes._id}, {"$set" : {token : Date.now}})
-                res.send("Connected! ;D")
+                res.status(200).send("Connected!")
             }
         }
     }
